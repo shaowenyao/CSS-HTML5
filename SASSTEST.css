@@ -1,0 +1,17 @@
+.testextend, body {
+  background-color: red; }
+
+body {
+  font: 100% Helvetica, sans-serif;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px; }
+  body .substyle {
+    color: red; }
+    body .substyle:hover {
+      color: black; }
+    body .substyle-offstyle {
+      color: pink; }
+
+/*# sourceMappingURL=SASSTEST.css.map */

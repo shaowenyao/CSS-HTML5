@@ -1,0 +1,51 @@
+//@import .less just like CSS
+@color-base: #2d5e8b; //variables, use { } to add rules and whatnot
+.whitetest { color: #fff; } //mixin test
+.border-radius(@radius:5px) { //border radius for cross browser parametric plugin
+  -webkit-border-radius: @radius;
+     -moz-border-radius: @radius;
+          border-radius: @radius;
+}
+.hidethis () { display:none; } //preset parametrix mixin
+.class1 {
+  background-color: @color-base; //variable plugin
+  color: saturate(@color-base, 5%); //functions to manipulate variables
+  .whitetest; //mixin plugin
+  .class2 { //nested rule
+    background-color: #fff;
+    color: @color-base;
+	.whitetest; //mixin plugin
+	.class2nested { //third level nest test
+		.whitetest;
+		@media (min-width: 768px) { //specific media query DOES NOT STACK WITH OTHERS
+			color: red;
+			 @font-face { //GLOBAL BUBBLE UP EVENT OR MEDIA QUERY
+				src: made-up-url;
+			  }
+		}
+	}
+	&:hover { // pseudo-class
+	 &:extend(.class1); //apply property to multiple classes, add 'all' to target all css with that class
+	 content: "-after";
+	}
+  }
+}
+.class1b {
+	.class1(); //mixin to copy a parent style
+	.border-radius(4px); //parametric border radius plugin
+	.hidethis; //preset paramatrix plugin
+}
+.mixin(@color: black; @margin: 10px; @padding: 20px) { //template for mix in, @arguments if you are lazy to populate
+  color: @color;
+  margin: @margin;
+  padding: @padding;
+}
+.mixclass1 { //mix with custom overrides and default populated
+  .mixin(@margin: 20px; @color: #33acfe);
+}
+.mixin(dark; @color) { //use @switch:dark; to change the output
+  color: darken(@color, 10%);
+}
+.mixin(light; @color) {
+  color: lighten(@color, 10%);
+}

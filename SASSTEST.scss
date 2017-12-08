@@ -1,0 +1,31 @@
+$font-stack:    Helvetica, sans-serif; //variable declare
+// import 'name (do not include .scss)'
+// font { font css stuff} -> compact css properties to type if long-hand
+@mixin border-radius($radius) { //mixin border radius
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+$font: ( // to use, use {$font, property}
+  color: #666,
+  family: (Arial, Helvetica),
+  size: 16px,
+  line-height: 1.4
+);
+// #{$name} -> convert to text
+// set @donotload (or wtvr) for css rules for extend only
+// @at-root (without: media) removes nesting
+// @include same as less
+
+.testextend { background-color:red; }
+body {
+  font: 100% $font-stack; //variable declare
+  @include border-radius(10px); //use mixin border radius
+  @extend .testextend; //text extend style
+  .substyle { //substyle, if you use body. will be complied external
+	color:red;
+	&:hover { color: black;} //psuedo class
+	&-offstyle { color: pink; } //off-shoot class
+  }
+}

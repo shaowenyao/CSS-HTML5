@@ -1,0 +1,62 @@
+.whitetest {
+  color: #fff;
+}
+.class1,
+.class1 .class2:hover,
+.class1b .class2:hover {
+  background-color: #2d5e8b;
+  color: #285e90;
+  color: #fff;
+}
+.class1 .class2 {
+  background-color: #fff;
+  color: #2d5e8b;
+  color: #fff;
+}
+.class1 .class2 .class2nested {
+  color: #fff;
+}
+@media (min-width: 768px) {
+  .class1 .class2 .class2nested {
+    color: red;
+  }
+  @font-face {
+    src: made-up-url;
+  }
+}
+.class1 .class2:hover {
+  content: "-after";
+}
+.class1b {
+  background-color: #2d5e8b;
+  color: #285e90;
+  color: #fff;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  display: none;
+}
+.class1b .class2 {
+  background-color: #fff;
+  color: #2d5e8b;
+  color: #fff;
+}
+.class1b .class2 .class2nested {
+  color: #fff;
+}
+@media (min-width: 768px) {
+  .class1b .class2 .class2nested {
+    color: red;
+  }
+  @font-face {
+    src: made-up-url;
+  }
+}
+.class1b .class2:hover {
+  content: "-after";
+}
+.mixclass1 {
+  color: #33acfe;
+  margin: 20px;
+  padding: 20px;
+}
