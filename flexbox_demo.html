@@ -1,0 +1,28 @@
+<style>
+div, span, p, a { display:flex; border:solid 1px #ccc; }
+.flexbase { border:solid 1px #ccc;}
+.flexwrap { flex-wrap:wrap; }
+.flexrow {  flex-direction: row ; order:1; flex:flex-grow flex-shrink; flex-grow:3; flex-shrink:1; justify-content:center; }
+.flexcolumn {  flex-direction: column ; order:2; flex:flex-grow flex-shrink; flex-grow:1;  justify-content:flex-end; }
+.flexrow span { width: 49%; align-items:center; justify-content: center;  }
+.flexcolumn span { justify-content:flex-end; flex-basis:20px; align-items:baseline; align-content:space-between;}
+</style>
+
+<div>
+	<div class="flexwrap flexrow">
+		<span>
+			item
+		</span>
+		<span>
+			item
+		</span>
+	</div>
+	<div class="flexwrap flexcolumn">
+		<span>
+			item
+		</span>
+		<span>
+			item
+		</span>
+	</div>
+</div>
