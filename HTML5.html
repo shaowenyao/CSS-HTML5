@@ -1,3 +1,8 @@
+<!-- div attr-->
+disabled, title
+<q>this is a quotation</q>
+<abbr>abbreviation highlight</abbr>
+
 <!-- 'react snippet' -->
 <style>
 customdivtag { body:black; /*insert styles here */ }
@@ -10,3 +15,32 @@ customdivtag { body:black; /*insert styles here */ }
     <summary>what users see before expanding + D arrow</summary>
     <div>rest of content - can add multiple</div>
 </detail>
+
+<markj>this is yellow</mark>
+<meter value="0.6">60%</meter>
+<rp>asian characters here</rp>
+
+<!-- use datalist to autocomnplete -->
+<form action="/action_page.php" method="get">
+    <input list="browsers" name="browser">
+    <datalist id="browsers">
+      <option value="Internet Explorer">
+      <option value="Firefox">
+      <option value="Chrome">
+      <option value="Opera">
+      <option value="Safari">
+    </datalist>
+    <input type="submit">
+  </form>
+
+  <!-- drag slider -->
+  <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">0
+    <input type="range" id="a" value="50">100
+    +<input type="number" id="b" value="50">
+    =<output name="x" for="a b"></output>
+    </form>
+
+<!-- html attr -->
+<input readonly></input>
+autfocus, disabled, readonly, required, 
+<form autocomplete="on"></form>
